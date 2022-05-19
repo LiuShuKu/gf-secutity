@@ -83,7 +83,7 @@ var (
 	errorMsg = http.StatusText(http.StatusInternalServerError)
 )
 
-// Encapsulate Json parameter return
+// Response Encapsulate Json parameter return
 func Response(code int, data interface{}, msg string, request *ghttp.Request) {
 	// reset response status code
 	{
@@ -97,7 +97,7 @@ func Response(code int, data interface{}, msg string, request *ghttp.Request) {
 	request.Exit()
 }
 
-// Carry pagination total return
+// ResponseTotal Carry pagination total return
 func ResponseTotal(code int, data interface{}, msg string, total int64, isInner bool, request *ghttp.Request) {
 	// reset response status code
 	{
@@ -133,7 +133,7 @@ func ResponseTotal(code int, data interface{}, msg string, total int64, isInner 
 	request.Exit()
 }
 
-// resetHttpStatus Set the status in the http Response to 200, the front end cannot be parsed
+// resetHttpStatus unified http response status code is 200
 func resetHttpStatus(request *ghttp.Request) {
 	request.Response.ClearBuffer()
 	request.Response.Status = http.StatusOK
