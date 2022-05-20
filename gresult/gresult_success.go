@@ -8,7 +8,9 @@
 
 package gresult
 
-import "github.com/gogf/gf/v2/net/ghttp"
+import (
+	"github.com/gogf/gf/v2/net/ghttp"
+)
 
 // Success respond to success messages only
 // http status 200
