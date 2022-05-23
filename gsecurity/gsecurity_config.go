@@ -235,10 +235,10 @@ func join(param ...string) (pattern string) {
 }
 
 // handlerConfigNotFound handling unable to read configuration file
-func handlerConfigNotFound(param string) *gvar.Var {
-	v, _ := g.Config(configFileName).Get(SecurityCtx, param)
+func handlerConfigNotFound(path string) *gvar.Var {
+	v, _ := g.Config(configFileName).Get(SecurityCtx, path)
 	if v == nil {
-		allField := strings.Split(param, ".")
+		allField := strings.Split(path, ".")
 		length := len(allField)
 		printNotConfigured(allField[length-1])
 	}
@@ -246,6 +246,6 @@ func handlerConfigNotFound(param string) *gvar.Var {
 }
 
 // printNotConfigured output is missing configuration reminder
-func printNotConfigured(paramName string) {
-	SecurityLog.Warningf(SecurityCtx, "You have not configured '%s', the system will use the default value .", paramName)
+func printNotConfigured(pathName string) {
+	SecurityLog.Warningf(SecurityCtx, "You have not configured '%s', the system will use the default value .", pathName)
 }
