@@ -20,13 +20,16 @@ const (
 
 	// configuration header name
 	configName = "gf-security"
+
+	// gf-security Log Prefix
+	logPrefix = "[gf-security-LOG]"
 )
 
 // all configurable items
 const (
 
 	// token generated token name , also the cookie name
-	tokenName = "gf-token"
+	tokenName = "tokenName"
 
 	// token expiration time
 	timeoutName = "timeout"
@@ -87,4 +90,72 @@ const (
 
 	// check whether Id-Token
 	checkIdTokenName = "checkIdToken"
+)
+
+// all configurable items
+// default value
+const (
+
+	// token generated token name , also the cookie name
+	tokenDefValue = "gf-token"
+
+	// token expiration time
+	timeoutDefValue = 2592000
+
+	// temporary validity period of token
+	activityTimeoutDefValue = -1
+
+	// Whether to allow the same account to log in concurrently
+	isConcurrentDefValue = true
+
+	// whether to share a token
+	isShareDefValue = true
+
+	// maximum number of logins for the same account
+	maxLoginCountDefValue = 12
+
+	// Whether to try to read the Token from the request body
+	isReadBodyDefValue = true
+
+	// whether to try to read the token from the header
+	isReadHeadDefValue = true
+
+	// whether to try to read the token from the cookie
+	isReadCookieDefValue = true
+
+	// token style
+	tokenStyleDefValue = "uuid"
+
+	// By default, the data is stored in the local cache, and the interval between expired data is cleaned up each time.
+	dataRefreshPeriodDefValue = 30
+
+	// whether to log in when getting token session
+	tokenSessionCheckLoginDefValue = true
+
+	// whether to turn on automatic renewal
+	autoRenewDefValue = true
+
+	// token prefix
+	tokenPrefixDefValue = ""
+
+	// Whether to print version glyphs when initializing the configuration
+	isPrintDefValue = true
+
+	// whether to print the operation log
+	isLogDefValue = false
+
+	// jwtKey
+	jwtSecretKeyDefValue = ""
+
+	// validity period of id token
+	idTokenTimeoutDefValue = 86400
+
+	// Http Basic authenticated account and password
+	basicDefValue = ""
+
+	// Configure the network access address of the current project
+	currDomainDefValue = ""
+
+	// check whether Id-Token
+	checkIdTokenDefValue = false
 )
