@@ -89,7 +89,7 @@ func Response(code int, data interface{}, msg string, request *ghttp.Request) {
 	{
 		resetHttpStatus(request)
 	}
-	_ = request.Response.WriteJson(result{
+	request.Response.WriteJson(result{
 		Code: code,
 		Msg:  msg,
 		Data: data,
@@ -118,7 +118,7 @@ func ResponseTotal(code int, data interface{}, msg string, total int64, isInner 
 			m["total"] = total
 
 		}
-		_ = request.Response.WriteJson(r)
+		request.Response.WriteJson(r)
 
 	} else {
 		// total will be equal to data
@@ -128,7 +128,7 @@ func ResponseTotal(code int, data interface{}, msg string, total int64, isInner 
 			Data:  data,
 			ToTal: total,
 		}
-		_ = request.Response.WriteJson(r)
+		request.Response.WriteJson(r)
 	}
 	request.Exit()
 }

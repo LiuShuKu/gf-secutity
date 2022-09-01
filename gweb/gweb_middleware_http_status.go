@@ -13,7 +13,7 @@
 package gweb
 
 import (
-	"gf-security/gresult"
+	"gf-secutity/gresult"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"net/http"
 )

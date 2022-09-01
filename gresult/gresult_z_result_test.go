@@ -10,7 +10,7 @@ package gresult_test
 import (
 	"context"
 	"fmt"
-	"gf-security/gresult"
+	"gf-secutity/gresult"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/test/gtest"
